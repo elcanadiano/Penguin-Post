@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example Penguin Post page</title>
+<link rel="stylesheet" type="text/css" href="styles/penguinpost.min.css" />
+<style>
+body {
+	font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 14px;
+}
+</style>
+</head>
+<body>
+<h1>Example Penguin Post page</h1>
+<p>This is an example of Penguin Post in action. Please contact me <a href="mailto:scribbleseq@gmail.com">by email</a> if you have any questions. Below is what you will need to implement in your HTML page. Please note that we use the jQuery library along with this. I added the &lt;script&gt; tag for jQuery 1.8.0.</p>
+<p>I've also provided both the DEV and the minfied versions of all my CSS and JavaScript files. I recommend minifying them before using them on a live site.</p>
+<p>You will need PHP 5.x with PHP mail() enabled along with jQuery 1.4+ in order to run Penguin Post in your website. Thank you for using Penguin Post, and as always, let me know if there are any issues. Please look into postcaptcha.php and set your questions first. You will also have to look at penguinpost.php to set your email settings.</p>
+<!-- Powered by Penguin Post - http://www.bookcaseads.com -->
+<div id="penguinForm">
+	<div id="penguinFields">
+		<div class="formRow">
+			<span class="title">Name (optional):</span>
+			<input type="text" id="realName" />
+			<span id="realNameMessage" class="error"></span>
+		</div>
+		<div class="formRow">
+			<span class="title">PayPal Email:</span>
+			<input type="email" id="emailAddress" />
+			<span id="emailAddressMessage" class="error"></span>
+		</div>
+		<div class="formRow">
+			<span class="title">Steam Profile URL:</span>
+			<input type="url" id="steamURL" />
+			<span id="steamURLMessage" class="error"></span>
+		</div>
+		<div class="formRow">
+			<span class="title">Steam Username/ID:</span>
+			<input type="text" id="steamUsnm" />
+			<span id="steamUsnmMessage" class="error"></span>
+		</div>
+		<div class="formRow">
+			<span class="title">Donation Amount (in USD):</span>
+			<select id="donationAmount">
+				<option value="Select">Select</option>
+				<option value="five">$5.00</option>
+				<option value="ten">$10.00</option>
+				<option value="other">Other</option>
+			</select>
+			<span id="donationAmountMessage" class="error"></span>
+		</div>
+		<div class="formRow">
+			<span class="title">Custom Message:</span>
+			<textarea id="message"></textarea>
+			<!--<span id="messageMessage" class="error"></span>-->
+		</div>
+	</div>
+	<a href="javascript:submitEmail()" class="button">Submit</a>
+</div>
+
+<div id="confirmationBox">
+	<div class="close">&times;</div>
+	<p id="confirmationMessage"></p>
+</div>
+<!-- Powered by Penguin Post - http://www.bookcaseads.com -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/penguinpost-captcha.min.js"></script>
+</body>
+</html>
